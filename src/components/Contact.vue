@@ -155,8 +155,7 @@
                           text-secondary
                           max-w-max
                           bg-opacity-10
-                        "
-                        style="fill: red;"
+                        " 
                       >
                         <location />
                       </button>
