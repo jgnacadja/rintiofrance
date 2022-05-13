@@ -298,8 +298,8 @@
                         required
                       ></textarea>
                     </div>
-                    <div class="mb-6" style="width: 70%;margin : auto">
-                        <vue-hcaptcha sitekey="29c39276-df88-4553-ab55-91ca81f944ef" @verify="onVerify"
+                    <div class="mb-6 mx-auto" style="width: 70%;">
+                        <vue-hcaptcha :sitekey="siteKey" @verify="onVerify"
                                       @expired="onExpire"
                                       @challenge-expired="onChallengeExpire"
                                       @error="onError">
@@ -366,7 +366,8 @@ export default {
       message: null,
       result: null,
       color: null,
-      captchaVerified: false
+      captchaVerified: false,
+      siteKey: process.env.GRIDSOME_HCAPTCHA
     };
   },
   methods: {
