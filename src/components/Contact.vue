@@ -103,21 +103,7 @@
                           href="tel:+33 6 25 18 40 11"
                           >+33 6 27 54 50 21</a
                         >
-                      </div>
-                      <div>
-                        <a
-                          class="hover:text-secondary"
-                          href="tel:+225 01 07 07 77"
-                          >+225 01 07 07 77</a
-                        >
-                      </div>
-                      <div>
-                        <a
-                          class="hover:text-secondary"
-                          href="tel:+229 97 11 94 79"
-                          >+229 97 11 94 79</a
-                        >
-                      </div>
+                      </div>  
                     </div>
                   </div>
 
@@ -147,11 +133,45 @@
                         <a
                           class="hover:text-secondary"
                           href="mailto:contact@rintio.com"
-                          >contact@rintio.com</a
+                          >Contact@rintio.com</a
                         >
                       </div>
                     </div>
                   </div>
+
+                <div class="flex items-center p-4">
+                    <div class="w-2/12 text-center">
+                      <button
+                        class="
+                          flex
+                          items-center
+                          w-12
+                          h-12
+                          p-3
+                          uppercase
+                          rounded-full
+                          pointer-events-none
+                          bg-secondary
+                          text-secondary
+                          max-w-max
+                          bg-opacity-10
+                        "
+                        style="fill: red;"
+                      >
+                        <location />
+                      </button>
+                    </div>
+                    <div class="w-10/12 px-4 md:px-0">
+                      <div>
+                        <a
+                          class="hover:text-secondary"
+                          href="#"
+                          >Siège RINTIO France ( 17 rue Crevel duval  Ruel malmaison )</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -320,11 +340,13 @@
 <script>
 import Phone from "~/assets/images/icons/phone.svg";
 import Mail from "~/assets/images/icons/envelope.svg";
+import location from "~/assets/images/icons/location.svg";
 import emailjs from "emailjs-com";
 export default {
   components: {
     Phone,
     Mail,
+    location,
   },
   data() {
     return {
