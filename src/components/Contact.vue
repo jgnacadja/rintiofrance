@@ -298,6 +298,9 @@
                         required
                       ></textarea>
                     </div>
+                    <div class="mb-6" style="width: 70%;margin : auto">
+                        <vue-hcaptcha sitekey="29c39276-df88-4553-ab55-91ca81f944ef"></vue-hcaptcha> 
+                    </div> 
                     <div class="mb-6">
                       <button
                         type="submit"
@@ -341,11 +344,15 @@ import Phone from "~/assets/images/icons/phone.svg";
 import Mail from "~/assets/images/icons/envelope.svg";
 import location from "~/assets/images/icons/location.svg";
 import emailjs from "emailjs-com";
+
+import VueHcaptcha from '@hcaptcha/vue-hcaptcha'
+
 export default {
   components: {
     Phone,
     Mail,
     location,
+    VueHcaptcha,
   },
   data() {
     return {
