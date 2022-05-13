@@ -20,14 +20,7 @@
         :content="$page.page.sections[2].columns[1]"
         :button="$page.page.sections[2].columns[2]"
       />
-    </LazyHydrate>
-
-    <LazyHydrate when-visible>
-      <Story
-        :content="$page.page.sections[3].columns[0]"
-        :stories="$page.page.sections[3].columns[1].columns"
-      />
-    </LazyHydrate>
+    </LazyHydrate> 
 
     <LazyHydrate when-visible>
       <Partner
@@ -157,8 +150,7 @@ query {
 import LazyHydrate from "vue-lazy-hydration";
 import Homeslider from "~/components/home/Homeslider.vue";
 import About from "~/components/home/About.vue";
-import Offer from "~/components/home/Offer.vue";
-import Story from "~/components/home/Story.vue";
+import Offer from "~/components/home/Offer.vue"; 
 import Partner from "~/components/home/Partner.vue";
 import Blog from "~/components/home/Blog.vue";
 import Map from "~/components/home/Map.vue";
@@ -168,8 +160,7 @@ export default {
     LazyHydrate,
     Homeslider,
     About,
-    Offer,
-    Story,
+    Offer, 
     Partner,
     Blog,
     Map,
