@@ -42,14 +42,7 @@
         :title="$page.page.sections[5].name"
         :content="$page.page.sections[5].columns[0]"
       />
-    </LazyHydrate> 
-
-    <LazyHydrate when-visible>
-      <Map
-        :cover="$page.page.sections[6].columns[0]"
-        :content="$page.page.sections[6].columns[1]"
-      />
-    </LazyHydrate>
+    </LazyHydrate>  
   </Layout>
 </template>
 
@@ -160,8 +153,7 @@ import About from "~/components/home/About.vue";
 import Offer from "~/components/home/Offer.vue";
 import Story from "~/components/home/Story.vue";
 import Partner from "~/components/home/Partner.vue";
-import Blog from "~/components/home/Blog.vue";
-import Map from "~/components/home/Map.vue";
+import Blog from "~/components/home/Blog.vue"; 
 
 export default {
   components: {
@@ -171,8 +163,7 @@ export default {
     Offer,
     Story,
     Partner,
-    Blog,
-    Map,
+    Blog, 
   },
   metaInfo() {
     return {
