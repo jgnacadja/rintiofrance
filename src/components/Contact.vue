@@ -280,7 +280,11 @@
                       ></textarea>
                     </div>
                     <div class="mb-6" style="width: 70%;margin : auto">
-                        <vue-hcaptcha sitekey="29c39276-df88-4553-ab55-91ca81f944ef"></vue-hcaptcha> 
+                        <vue-hcaptcha sitekey="29c39276-df88-4553-ab55-91ca81f944ef" @verify="onVerify"
+                                      @expired="onExpire"
+                                      @challenge-expired="onChallengeExpire"
+                                      @error="onError">
+                        </vue-hcaptcha> 
                     </div> 
                     <div class="mb-6">
                       <button
@@ -341,40 +345,62 @@ export default {
       message: null,
       result: null,
       color: null,
+      captchaVerified: false
     };
   },
   methods: {
-    sendEmail: (e) => {
-      let $this = this;
-      $this.data.result = null;
-      $this.data.color = null;
+        onVerify: () => {
+                        this.captchaVerified = true
+                    },
+        onExpire: () => {
+                        console.log('Token expired')
+                    },
+        onChallengeExpire: () => {
+                        console.log('Challenge expired')
+                    },
+        onError: (err) => {
+                        console.log('Error', err)
+                    },
+        sendEmail: (e) => {
+          let $this = this;
+          $this.data.result = null;
+          $this.data.color = null;
 
-      emailjs
-        .sendForm(
-          "service_kcg1fpl",
-          "template_q2ewdb3",
-          e.target,
-          "user_Y2KIJGmvuqmYVVqo9JBO8"
-        )
-        .then(
-          () => {
-            $this.result = "Votre message a été envoyé";
-            $this.color = "text-green-500";
-            // Reset form field
-            $this.resetForm();
-          },
-          () => {
-            $this.result = "Une erreur est survenue, veuillez réessayer";
-            $this.color = "text-red-500";
+          if ( this.captchaVerified )
+          {
+            
+                emailjs
+                  .sendForm(
+                    "service_kcg1fpl",
+                    "template_q2ewdb3",
+                    e.target,
+                    "user_Y2KIJGmvuqmYVVqo9JBO8"
+                  )
+                  .then(
+                    () => {
+                      $this.result = "Votre message a été envoyé";
+                      $this.color = "text-green-500";
+                      // Reset form field
+                      $this.resetForm();
+                    },
+                    () => {
+                      $this.result = "Une erreur est survenue, veuillez réessayer";
+                      $this.color = "text-red-500";
+                    }
+                  );
           }
-        );
-    },
-    resetForm() {
-      this.name = null;
-      this.email = null;
-      this.object = null;
-      this.message = null;
-    },
+          else
+          {
+              $this.result = "Le captcha doit être coché..";
+              $this.color = "text-red-500";
+          }
+        },
+        resetForm() {
+          this.name = null;
+          this.email = null;
+          this.object = null;
+          this.message = null;
+        },
   },
 };
 </script>
