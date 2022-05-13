@@ -29,13 +29,6 @@
         :partners="$page.page.sections[4].columns[1].columns"
       />
     </LazyHydrate>
-
-    <LazyHydrate when-visible>
-      <Blog
-        :title="$page.page.sections[5].name"
-        :content="$page.page.sections[5].columns[0]"
-      />
-    </LazyHydrate>  
   </Layout>
 </template>
 
@@ -145,7 +138,6 @@ import Homeslider from "~/components/home/Homeslider.vue";
 import About from "~/components/home/About.vue";
 import Offer from "~/components/home/Offer.vue"; 
 import Partner from "~/components/home/Partner.vue";
-import Blog from "~/components/home/Blog.vue"; 
 
 export default {
   components: {
@@ -154,7 +146,6 @@ export default {
     About,
     Offer, 
     Partner,
-    Blog, 
   },
   metaInfo() {
     return {
