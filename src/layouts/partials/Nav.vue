@@ -6,7 +6,7 @@
           >
             <div class="h-full pt-2 mx-2">
               <g-link to="/postuler">
-                <button type="submit" class="font-bold my-auto p-4 text-white text-sm bg-secondary rounded-sm hover:bg-primary focus:outline-none uppercase">
+                <button type="submit" class="font-bold rounded my-auto p-4 text-white text-sm bg-secondary rounded-sm hover:bg-primary focus:outline-none uppercase">
                 Je postule
               </button>
               </g-link>
@@ -21,36 +21,13 @@
       >
         <div class="h-full pt-6 mx-2">
           <g-link to="/postuler">
-            <button type="submit" class="font-bold my-auto p-4 text-white text-sm bg-secondary rounded-sm hover:bg-primary focus:outline-none uppercase">
+            <button type="submit" class="font-bold my-auto p-4 text-white rounded text-sm bg-secondary rounded-sm hover:bg-primary focus:outline-none uppercase">
             Je postule
           </button>
           </g-link>
         </div>
       </div>
 
-      <div
-        class="text-center"
-      >
-        <div class="h-full pt-6 mx-2">
-          <g-link to="/postuler">
-            <button type="submit" class="font-bold my-auto p-4 text-white text-sm bg-secondary rounded-sm hover:bg-primary focus:outline-none uppercase">
-            J'évalue
-          </button>
-          </g-link>
-        </div>
-      </div>
-
-      <div
-        class="text-center"
-      >
-        <div class="h-full pt-6 mx-2">
-          <g-link to="/postuler">
-            <button type="submit" class="font-bold my-auto p-4 text-white text-sm bg-secondary rounded-sm hover:bg-primary focus:outline-none uppercase">
-            En savoir plus
-          </button>
-          </g-link>
-        </div>
-      </div>
     </nav>
   </div>
 </template>
