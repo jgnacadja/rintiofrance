@@ -38,6 +38,7 @@
           <div class="mt-4 text-center">
             <g-link :to="button.ctaLink">
               <button
+                v-if="button.ctaText"
                 type="submit"
                 class="flex px-6 py-2 text-sm text-white uppercase rounded-sm md:py-4 bg-secondary hover:bg-primary"
               >
@@ -151,7 +152,7 @@ query{
     }
   }
 
-  offers: contentfulCategory(path: "offres") {
+  offers: contentfulCategory(path: "offres-france") {
     id
     title
     path
