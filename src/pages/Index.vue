@@ -20,34 +20,13 @@
         :content="$page.page.sections[2].columns[1]"
         :button="$page.page.sections[2].columns[2]"
       />
-    </LazyHydrate>
-
-    <LazyHydrate when-visible>
-      <Story
-        :content="$page.page.sections[3].columns[0]"
-        :stories="$page.page.sections[3].columns[1].columns"
-      />
-    </LazyHydrate>
+    </LazyHydrate> 
 
     <LazyHydrate when-visible>
       <Partner
         :title="$page.page.sections[4].name"
         :content="$page.page.sections[4].columns[0]"
         :partners="$page.page.sections[4].columns[1].columns"
-      />
-    </LazyHydrate>
-
-    <LazyHydrate when-visible>
-      <Blog
-        :title="$page.page.sections[5].name"
-        :content="$page.page.sections[5].columns[0]"
-      />
-    </LazyHydrate> 
-
-    <LazyHydrate when-visible>
-      <Map
-        :cover="$page.page.sections[6].columns[0]"
-        :content="$page.page.sections[6].columns[1]"
       />
     </LazyHydrate>
   </Layout>
@@ -157,20 +136,16 @@ query {
 import LazyHydrate from "vue-lazy-hydration";
 import Homeslider from "~/components/home/Homeslider.vue";
 import About from "~/components/home/About.vue";
-import Offer from "~/components/home/Offer.vue";
-import Story from "~/components/home/Story.vue";
+import Offer from "~/components/home/Offer.vue"; 
 import Partner from "~/components/home/Partner.vue";
-import Map from "~/components/home/Map.vue";
 
 export default {
   components: {
     LazyHydrate,
     Homeslider,
     About,
-    Offer,
-    Story,
+    Offer, 
     Partner,
-    Map,
   },
   metaInfo() {
     return {
