@@ -1,4 +1,4 @@
-const nodeExternals = require("webpack-node-externals");
+//const nodeExternals = require("webpack-node-externals");
 
 const tailwindcss = require("tailwindcss");
 const contentful = require("./plugins/plugin.contentful");
@@ -35,48 +35,46 @@ module.exports = {
     sitemap,
     tailwind,
   ],
-
-  chainWebpack(config, { isServer }) {
-    config.module.rules.delete("svg");
-    config.module
-      .rule("svg")
-      .test(/\.svg$/)
-      .use("vue")
-      .loader("vue-loader")
-      .end()
-      .use("svg-to-vue-component")
-      .loader("svg-to-vue-component/loader");
-
-    if (isServer) {
-      config.externals(
-        nodeExternals({
-          allowlist: [
-            /\.css$/,
-            /\?vue&type=style/,
-            /vue-instantsearch/,
-            /instantsearch.js/,
-            /typeface-league-spartan/,
-          ],
-        })
-      );
-    }
-  },
-
-  configureWebpack(config) {
-    config.node = {
-      fs: 'empty',
-      child_process: 'empty',
-      net: 'empty',
-      dns: 'empty',
-      tls: 'empty',
-    };
-    return config;
-  },
-
-  templates: {
+templates: {
     ContentfulPost: "/blog/article/:title",
-    //ContentfulCategory: "/category/:title",
-    //ContentfulTag: "/tag/:title",
   },
+  // chainWebpack(config, { isServer }) {
+  //   config.module.rules.delete("svg");
+  //   config.module
+  //     .rule("svg")
+  //     .test(/\.svg$/)
+  //     .use("vue")
+  //     .loader("vue-loader")
+  //     .end()
+  //     .use("svg-to-vue-component")
+  //     .loader("svg-to-vue-component/loader");
+
+  //   if (isServer) {
+  //     config.externals(
+  //       nodeExternals({
+  //         allowlist: [
+  //           /\.css$/,
+  //           /\?vue&type=style/,
+  //           /vue-instantsearch/,
+  //           /instantsearch.js/,
+  //           /typeface-league-spartan/,
+  //         ],
+  //       })
+  //     );
+  //   }
+  // },
+
+  // configureWebpack(config) {
+  //   config.node = {
+  //     fs: 'empty',
+  //     child_process: 'empty',
+  //     net: 'empty',
+  //     dns: 'empty',
+  //     tls: 'empty',
+  //   };
+  //   return config;
+  // },
+
+  
 };
 
