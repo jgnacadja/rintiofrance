@@ -298,7 +298,7 @@
                         required
                       ></textarea>
                     </div>
-                    <div class="mb-6 flex justify-center">
+                    <div class="mb-6 md:flex md:justify-center captcha-container">
                         <vue-hcaptcha :sitekey="siteKey" @verify="onVerify"
                                       @expired="onExpire"
                                       @challenge-expired="onChallengeExpire"
@@ -426,3 +426,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+    @media screen and ( max-width: 377px) 
+    {
+        .captcha-container
+        { 
+            max-width: 150px;
+            overflow: hidden;
+        }
+    }
+</style>
