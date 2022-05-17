@@ -1,4 +1,4 @@
-//const nodeExternals = require("webpack-node-externals");
+const nodeExternals = require("webpack-node-externals");
 
 const tailwindcss = require("tailwindcss");
 const contentful = require("./plugins/plugin.contentful");
@@ -34,8 +34,9 @@ module.exports = {
     robot,
     sitemap,
     tailwind,
+    nodeExternals,
   ],
-templates: {
+  templates: {
     ContentfulPost: "/blog/article/:title",
   },
   // chainWebpack(config, { isServer }) {
@@ -74,7 +75,5 @@ templates: {
   //   };
   //   return config;
   // },
-
-  
 };
 
