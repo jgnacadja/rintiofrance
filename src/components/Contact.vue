@@ -298,7 +298,7 @@
                         required
                       ></textarea>
                     </div>
-                    <div class="mb-6 mx-auto" style="width: 70%;">
+                    <div class="mb-6 flex justify-center">
                         <vue-hcaptcha :sitekey="siteKey" @verify="onVerify"
                                       @expired="onExpire"
                                       @challenge-expired="onChallengeExpire"

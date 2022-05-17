@@ -121,7 +121,7 @@
 
 <static-query>
 query{
-   offer: contentfulCategory(path: "offres") {
+   offer: contentfulCategory(path: "offres-france") {
     id
     title
     path

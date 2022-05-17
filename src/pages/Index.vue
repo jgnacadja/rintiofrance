@@ -24,9 +24,9 @@
 
     <LazyHydrate when-visible>
       <Partner
-        :title="$page.page.sections[4].name"
-        :content="$page.page.sections[4].columns[0]"
-        :partners="$page.page.sections[4].columns[1].columns"
+        :title="$page.page.sections[3].name"
+        :content="$page.page.sections[3].columns[0]"
+        :partners="$page.page.sections[3].columns[1].columns"
       />
     </LazyHydrate>
   </Layout>
@@ -34,7 +34,7 @@
 
 <page-query>
 query {
-  page: contentfulPage(path: "Acceuil") {
+  page: contentfulPage(path: "Acceuil France") {
     path
     seo {
       id
