@@ -5,7 +5,7 @@
             <div class="md:flex md:content-center md:justify-center md:items-center">  
                 <form action="#" class="md:max-w-[50%] md:px-2 ">
                     <h3 class="text-red-600">Identité</h3>
-                    <div class="identite md:flex md:justify-between md:space-x-8 my-3"> 
+                    <div class="md:flex md:justify-between md:space-x-8 my-3"> 
                             <div class="px-2 mb-3"> 
                                 <input type="text" class="w-full md:w-80 border-2 px-3 py-1 border-zinc-700 rounded" name="nom" placeholder="Nom *">
                             </div>
@@ -13,7 +13,7 @@
                                 <input type="text" class="w-full md:w-80 border-2 px-3 py-1 border-zinc-700 rounded" name="tel" placeholder="Téléphone mobile">
                             </div> 
                     </div>
-                    <div class="identite md:flex md:justify-between md:space-x-8 my-3"> 
+                    <div class="md:flex md:justify-between md:space-x-8 my-3"> 
                             <div class="px-2 mb-3"> 
                                 <input type="text" class="w-full md:w-80 border-2 px-3 py-1 border-zinc-700 rounded" name="prenoms" placeholder="Prénoms *">
                             </div>
@@ -21,7 +21,7 @@
                                 <input type="url" class="w-full md:w-80 border-2 px-3 py-1 border-zinc-700 rounded" name="link" placeholder="Lien LinkedIn, Viadeo">
                             </div> 
                     </div>
-                    <div class="identite md:flex md:justify-between md:space-x-8 my-3"> 
+                    <div class="md:flex md:justify-between md:space-x-8 my-3"> 
                             <div class="px-2 mb-3"> 
                                 <input type="email" class="w-full md:w-80 border-2 px-3 py-1 border-zinc-700 rounded" name="email" placeholder="Adresse email *">
                             </div>
@@ -79,6 +79,12 @@
     import VueHcaptcha from '@hcaptcha/vue-hcaptcha'
     export default
     { 
+        metaInfo()
+        {
+            return { 
+                title: "Postuler"
+            }
+        },
         data() {
             return {
                 captchaVerified: false,
