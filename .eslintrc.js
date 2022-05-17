@@ -1,23 +1,33 @@
+"use strict";
 module.exports = {
-    "env": {
-        "browser": true,
-        "es6": true
+  env: {
+    node: true,
+    browser: true,
+    es6: true,
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:vue/essential",
+    "plugin:vue/recommended",
+    "prettier",
+    "prettier/vue",
+    "plugin:gridsome/recommended",
+  ],
+  globals: {
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
+  },
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:vue/essential"
-    ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "vue"
-    ],
-    "rules": {
-    }
+  },
+  plugins: ["gridsome"],
+  rules: {
+    "gridsome/format-query-block": "warn",
+    "gridsome/require-g-image-src": "error",
+    "gridsome/require-g-link-to": "warn",
+  },
 };
