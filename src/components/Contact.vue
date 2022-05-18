@@ -375,7 +375,8 @@ export default {
                         this.captchaVerified = true; 
                     },
         onExpire: () => {
-                        console.log('Token expired')
+                        console.log('Token expired');
+                        this.captchaVerified = false;
                     },
         onChallengeExpire: () => {
                         console.log('Challenge expired')
@@ -410,6 +411,8 @@ export default {
                       $this.color = "text-red-500";
                     }
                   );
+
+                  this.captchaVerified = false;
           }
           else
           {
