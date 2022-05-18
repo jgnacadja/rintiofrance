@@ -9,21 +9,5 @@ module.exports = function (api) {
   // api.loadSource(({ addCollection }) => {
   //   // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
   // })
-  api.configureWebpack({
-    node: {
-      fs: "empty",
-    },
-    module: {
-      rules: [
-        {
-          test: /\.(md|vtt)$/,
-          loader: "raw-loader", // npm install -D raw-loader
-        },
-        {
-          test: /\.svg$/,
-          loader: "vue-loader", 
-        },
-      ],
-    },
-  });
+  
 }
