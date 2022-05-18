@@ -383,7 +383,7 @@ export default {
         onError: (err) => {
                         console.log('Error', err)
                     },
-        sendEmail(e) {
+        sendEmail() {
           let $this = this;
           $this.result = null;
           $this.color = null;
@@ -394,8 +394,7 @@ export default {
                 emailjs
                   .sendForm(
                     "service_kcg1fpl",
-                    "template_q2ewdb3",
-                    e.target,
+                    "template_q2ewdb3", 
                     "user_Y2KIJGmvuqmYVVqo9JBO8"
                   )
                   .then(
