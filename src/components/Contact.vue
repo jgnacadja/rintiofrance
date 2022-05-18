@@ -373,7 +373,7 @@ export default {
   methods: {
         onVerify() { 
                         this.captchaVerified = true; 
-                  },
+                    },
         onExpire: () => {
                         console.log('Token expired')
                     },
@@ -383,7 +383,7 @@ export default {
         onError: (err) => {
                         console.log('Error', err)
                     },
-        sendEmail: (e) => {
+        sendEmail(e) {
           let $this = this;
           $this.result = null;
           $this.color = null;
@@ -404,12 +404,10 @@ export default {
                       $this.color = "text-green-500";
                       // Reset form field
                       $this.resetForm();
-                      console.log("succes");
                     },
                     () => {
                       $this.result = "Une erreur est survenue, veuillez réessayer";
                       $this.color = "text-red-500";
-                      console.log("erreur");
                     }
                   );
           }
@@ -417,7 +415,6 @@ export default {
           {
               $this.result = "Le captcha doit être coché..";
               $this.color = "text-red-500";
-              console.log("impossible");
           }
         },
         resetForm() {
