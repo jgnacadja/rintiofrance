@@ -383,7 +383,7 @@ export default {
         onError: (err) => {
                         console.log('Error', err)
                     },
-        sendEmail() {
+        sendEmail: (e) => {
           let $this = this;
           $this.result = null;
           $this.color = null;
@@ -394,7 +394,8 @@ export default {
                 emailjs
                   .sendForm(
                     "service_kcg1fpl",
-                    "template_q2ewdb3", 
+                    "template_q2ewdb3",
+                    e.target,
                     "user_Y2KIJGmvuqmYVVqo9JBO8"
                   )
                   .then(
@@ -403,10 +404,12 @@ export default {
                       $this.color = "text-green-500";
                       // Reset form field
                       $this.resetForm();
+                      console.log("succes");
                     },
                     () => {
                       $this.result = "Une erreur est survenue, veuillez réessayer";
                       $this.color = "text-red-500";
+                      console.log("erreur");
                     }
                   );
           }
@@ -414,6 +417,7 @@ export default {
           {
               $this.result = "Le captcha doit être coché..";
               $this.color = "text-red-500";
+              console.log("impossible");
           }
         },
         resetForm() {
