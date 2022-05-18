@@ -115,16 +115,20 @@
         methods:
         {
             onVerify() {
-                        this.captchaVerified = true
+                        this.captchaVerified = true;
+                        this.captchaVerified = false;
                     },
-            onExpire: () => {
-                            console.log('Token expired')
+            onExpire(){
+                            console.log('Token expired');
+                            this.captchaVerified = false;
                         },
-            onChallengeExpire: () => {
-                            console.log('Challenge expired')
+            onChallengeExpire(){
+                            console.log('Challenge expired');
+                            this.captchaVerified = false;
                         },
-            onError: (err) => {
-                            console.log('Error', err)
+            onError(err){
+                            console.log('Error', err);
+                            this.captchaVerified = false;
                         },
             sendEmail(e) { 
           this.result = null;
