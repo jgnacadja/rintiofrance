@@ -374,14 +374,17 @@ export default {
         onVerify() { 
                         this.captchaVerified = true; 
                     },
-        onExpire: () => {
-                        console.log('Token expired')
+        onExpire() {
+                        console.log('Token expired');
+                        this.captchaVerified = false;
                     },
-        onChallengeExpire: () => {
-                        console.log('Challenge expired')
+        onChallengeExpire() {
+                        console.log('Challenge expired');
+                        this.captchaVerified = false;
                     },
-        onError: (err) => {
-                        console.log('Error', err)
+        onError(err) {
+                        console.log('Error', err);
+                        this.captchaVerified = false;
                     },
         sendEmail(e) {
           let $this = this;
@@ -410,6 +413,8 @@ export default {
                       $this.color = "text-red-500";
                     }
                   );
+
+                  this.captchaVerified = false;
           }
           else
           {
