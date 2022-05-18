@@ -382,7 +382,7 @@ export default {
                         console.log('Challenge expired');
                         this.captchaVerified = false;
                     },
-        onError() {
+        onError(err) {
                         console.log('Error', err);
                         this.captchaVerified = false;
                     },
