@@ -372,7 +372,9 @@ export default {
   },
   methods: {
         onVerify: () => {
-                        this.captchaVerified = true
+                        console.warn(this.captchaVerified);
+                        this.captchaVerified = true;
+                        console.warn(this.captchaVerified);
                     },
         onExpire: () => {
                         console.log('Token expired')
@@ -388,7 +390,7 @@ export default {
           $this.result = null;
           $this.color = null;
 
-          if ( this.captchaVerified == true )
+          if ( this.captchaVerified )
           {
             
                 emailjs
