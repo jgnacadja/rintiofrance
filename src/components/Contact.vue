@@ -410,6 +410,8 @@ export default {
                       $this.color = "text-red-500";
                     }
                   );
+                  
+                  this.captchaVerified = false;
           }
           else
           {
