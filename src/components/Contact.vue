@@ -383,7 +383,7 @@ export default {
         onError: (err) => {
                         console.log('Error', err)
                     },
-        sendEmail: (e) => {
+        sendEmail() {
           let $this = this;
           $this.data.result = null;
           $this.data.color = null;
