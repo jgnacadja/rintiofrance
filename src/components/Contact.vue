@@ -371,8 +371,8 @@ export default {
     };
   },
   methods: {
-        onVerify: () => {
-                        this.captchaVerified = true
+        onVerify() { 
+                        this.captchaVerified = true; 
                     },
         onExpire: () => {
                         console.log('Token expired')
@@ -383,10 +383,10 @@ export default {
         onError: (err) => {
                         console.log('Error', err)
                     },
-        sendEmail: (e) => {
+        sendEmail(e) {
           let $this = this;
-          $this.data.result = null;
-          $this.data.color = null;
+          $this.result = null;
+          $this.color = null;
 
           if ( this.captchaVerified )
           {
