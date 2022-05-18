@@ -383,7 +383,7 @@ export default {
         onChallengeExpire() { 
                         this.captchaVerified = false;
                     },
-        onError(err) { 
+        onError() { 
                         this.captchaVerified = false;
                     },
         sendEmail(e) {
