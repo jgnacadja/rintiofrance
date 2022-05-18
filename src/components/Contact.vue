@@ -371,11 +371,9 @@ export default {
     };
   },
   methods: {
-        onVerify: () => {
-                        console.warn(this.captchaVerified);
-                        this.captchaVerified = true;
-                        console.warn(this.captchaVerified);
-                    },
+        onVerify() { 
+                        this.captchaVerified = true; 
+                  },
         onExpire: () => {
                         console.log('Token expired')
                     },
