@@ -44,11 +44,11 @@
                     <div class=" md:flex md:justify-between md:space-x-8 my-3"> 
                             <div class="px-2 mb-3"> 
                                 <label for="cv" class="block">Déposer votre CV</label>
-                                <input required id="cv" type="file" class="w-full md:w-80 border-2 px-3 py-1 border-zinc-700 rounded">
+                                <input required id="cv" type="file" accept=".pdf,.docx" class="w-full md:w-80 border-2 px-3 py-1 border-zinc-700 rounded">
                             </div>
                             <div class="px-2 mb-3"> 
                                 <label for="ltmt" class="block">Lettre de motivation</label>
-                                <input required type="file" id="ltmt" class="w-full md:w-80 border-2 px-3 py-1 border-zinc-700 rounded">
+                                <input required type="file" id="ltmt" accept=".pdf,.docx" class="w-full md:w-80 border-2 px-3 py-1 border-zinc-700 rounded">
                             </div> 
                     </div> 
 
