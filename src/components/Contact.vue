@@ -377,16 +377,13 @@ export default {
         onVerify() { 
                         this.captchaVerified = true; 
                     },
-        onExpire() {
-                        console.log('Token expired');
+        onExpire() { 
                         this.captchaVerified = false;
                     },
-        onChallengeExpire() {
-                        console.log('Challenge expired');
+        onChallengeExpire() { 
                         this.captchaVerified = false;
                     },
-        onError(err) {
-                        console.log('Error', err);
+        onError() { 
                         this.captchaVerified = false;
                     },
         sendEmail(e) {
