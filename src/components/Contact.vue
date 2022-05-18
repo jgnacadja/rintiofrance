@@ -388,7 +388,7 @@ export default {
           $this.result = null;
           $this.color = null;
 
-          if ( this.captchaVerified )
+          if ( this.captchaVerified == true )
           {
             
                 emailjs
