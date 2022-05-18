@@ -385,8 +385,8 @@ export default {
                     },
         sendEmail() {
           let $this = this;
-          $this.data.result = null;
-          $this.data.color = null;
+          $this.result = null;
+          $this.color = null;
 
           if ( this.captchaVerified )
           {
