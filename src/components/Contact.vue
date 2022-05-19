@@ -367,22 +367,24 @@ export default {
       result: null,
       color: null,
       captchaVerified: false,
-      siteKey: process.env.GRIDSOME_HCAPTCHA
+      siteKey: process.env.GRIDSOME_HCAPTCHA,
+      serviceId: process.env.GRIDSOME_EMAILJS_SERVICE_ID,
+      templateId: process.env.GRIDSOME_EMAILJS_TEMPLATE_ID,
+      eUserId: process.env.GRIDSOME_EMAILJS_USER_ID
     };
   },
   methods: {
         onVerify() { 
                         this.captchaVerified = true; 
                     },
-        onExpire: () => {
-                        console.log('Token expired');
+        onExpire() { 
                         this.captchaVerified = false;
                     },
-        onChallengeExpire: () => {
-                        console.log('Challenge expired')
+        onChallengeExpire() { 
+                        this.captchaVerified = false;
                     },
-        onError: (err) => {
-                        console.log('Error', err)
+        onError() { 
+                        this.captchaVerified = false;
                     },
         sendEmail(e) {
           let $this = this;
@@ -394,10 +396,10 @@ export default {
             
                 emailjs
                   .sendForm(
-                    "service_kcg1fpl",
-                    "template_q2ewdb3",
+                    this.serviceId,
+                    this.templateId,
                     e.target,
-                    "user_Y2KIJGmvuqmYVVqo9JBO8"
+                    this.eUserId
                   )
                   .then(
                     () => {
