@@ -11,7 +11,7 @@ const googleTM = require("./plugins/plugin.googleTM");
 module.exports = {
   siteName: "Rintio",
   siteDescription: "We involve for a better life",
-  siteUrl: `https:rintio.com`,
+  siteUrl: `https://rintio.fr`,
   titleTemplate: "Rintio - %s",
   icon: "./src/assets/favicon.png",
   metadata: {
