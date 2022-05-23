@@ -139,51 +139,7 @@
           </a>
         </div>
 
-        <!-- mobile footer col-1 -->
-        <div class="w-full px-5 py-2 mx-auto md:hidden">
-          <button
-            type="button"
-            aria-expanded="true"
-            class="flex items-center justify-between w-full py-2 text-sm font-extrabold text-left text-white border-b border-white focus:outline-none font-roboto"
-            aria-controls="headlessui-disclosure-panel-2"
-            @click="(openProducts = !openProducts), (openLinks = false)"
-          >
-            <span class="text-xl">Produits</span>
-            <ChevronUp :class="openProducts ? 'transform rotate-180' : ''" />
-          </button>
 
-          <div
-            class="pt-2 pb-2 transition ease-out transform"
-            :class="
-              openProducts
-                ? 'scale-100 opacity-100 delay-100 duration-100'
-                : 'scale-95 opacity-0 duration-75'
-            "
-          >
-            <!-- Links -->
-            <a
-              href="https://coraq.formation.chmp.org"
-              class="block w-full my-3 font-medium text-white duration-300 hover:text-gray-200"
-              :class="!openProducts ? 'hidden' : ''"
-            >
-              &bull; Coraq Lab - CHMP
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.rintio.idermato&hl=fr&gl=US"
-              class="block my-3 font-medium text-white duration-300 hover:text-gray-200"
-              :class="!openProducts ? 'hidden' : ''"
-            >
-              &bull; Idermato
-            </a>
-            <a
-              href="#"
-              class="block my-3 font-medium text-white duration-300 hover:text-gray-300"
-              :class="!openProducts ? 'hidden' : ''"
-            >
-              &bull; Duniya Data
-            </a>
-          </div>
-        </div>
 
         <!-- mobile footer col-1 -->
         <div class="w-full px-5 py-2 md:hidden">
