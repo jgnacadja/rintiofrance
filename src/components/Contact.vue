@@ -132,8 +132,8 @@
                       <div>
                         <a
                           class="hover:text-secondary"
-                          href="mailto:contact@rintio.com"
-                          >Contact@rintio.com</a
+                          href="mailto:contact@rintio.fr"
+                          >Contact@rintio.fr</a
                         >
                       </div>
                     </div>
@@ -165,7 +165,7 @@
                         <a
                           class="hover:text-secondary"
                           href="#"
-                          >Siège RINTIO France ( 17 rue Crevel duval  Ruel malmaison )</a
+                          > 17 rue Crevel duval  Ruel malmaison </a
                         >
                       </div>
                     </div>
