@@ -208,7 +208,7 @@
       <!-- Copyright Bar -->
       <div class="bg-secondary">
         <div class="px-3 py-4 m-auto font-bold text-center text-white">
-          Rintio 2019 © Tous droits réservés
+          Rintio 2022 © Tous droits réservés
         </div>
       </div>
     </footer>
