@@ -124,7 +124,7 @@
           <p class="pt-4">
             Voulez-vous nous rejoindre ? 
           </p> 
-          <g-link to="/postuler" class="px-6 py-2 max-h-14 w-36 text-sm text-white uppercase rounded-sm md:py-4 bg-secondary hover:bg-primary">Rejoindre</g-link> 
+          <g-link to="/postuler" class="px-6 py-2 max-h-14 w-36  text-sm text-white uppercase rounded-sm md:py-4 bg-secondary hover:bg-primary">Rejoindre</g-link> 
     </div>
   </div>
 </template>
