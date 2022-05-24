@@ -4,9 +4,9 @@
 
     <footer class="bg-primary">
       <div></div>
-      <div class="flex-wrap w-full px-4 text-white md:flex lg:flex-nowrap sm:px-0 lg:px-4 md:px-0 md:mx-0 md:text-left justify-around">
+      <div class="flex-wrap w-full px-4 text-white md:flex lg:flex-nowrap sm:px-0 lg:px-4 md:px-0 md:mx-0 md:text-left">
         <!-- Col-1 -->
-        <div class="w-full p-5 sm:px-10 lg:px-20 lg:w-3/12">
+        <div class="w-full p-5 sm:px-10 lg:px-20 lg:w-3/12 md:mr-auto">
           <div class="w-10">
             <Logo />
           </div> 
