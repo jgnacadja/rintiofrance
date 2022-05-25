@@ -118,14 +118,13 @@
         </div>
       </div>
     </div>
-  </div>
-
-    <div class="flex md:justify-end md:mr-8 md:space-x-5 flex-col md:flex-row"> 
+    <div class="flex justify-end space-x-4 w-90vw"> 
           <p class="pt-4">
             Voulez-vous nous rejoindre ? 
           </p> 
           <g-link to="/postuler" class="px-6 py-2 max-h-14 w-36  text-sm text-white uppercase rounded-sm md:py-4 bg-secondary hover:bg-primary">Rejoindre</g-link> 
     </div>
+  </div> 
   </div>
 </template>
 
