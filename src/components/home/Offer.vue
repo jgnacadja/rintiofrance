@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div
     class="grid grid-cols-6 gap-4 px-4 py-8 md:grid-cols-4 lg:grid-cols-3 md:grid-flow-row lg:grid-flow-rows xl:px-12 xl:py-16 2xl:px-32 2xl:py-24"
     v-bind:style="[
@@ -116,6 +117,14 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+    <div class="flex md:justify-end md:mr-8 md:space-x-5 flex-col md:flex-row"> 
+          <p class="pt-4">
+            Voulez-vous nous rejoindre ? 
+          </p> 
+          <g-link to="/postuler" class="px-6 py-2 max-h-14 w-36  text-sm text-white uppercase rounded-sm md:py-4 bg-secondary hover:bg-primary">Rejoindre</g-link> 
     </div>
   </div>
 </template>
