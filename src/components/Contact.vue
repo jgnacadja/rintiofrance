@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-4 justify-evenly md:px-0 md:text-left">
+  <div class="w-full px-4 justify-evenly md:px-0 md:text-left" id="formulaire">
     <div
       class="
         md:grid
@@ -216,12 +216,28 @@
                   <form id="form" name="form" @submit.prevent="sendEmail">
                     <div class="mb-6">
                       <input
-                        type="text"
-                        v-model="name"
-                        name="name"
                         id="name"
+                        class="
+                          w-full
+                          px-3
+                          py-2
+                          placeholder-gray-300
+                          border border-gray-300
+                          rounded-sm
+                          focus:outline-none
+                          focus:ring focus:ring-indigo-100
+                          focus:border-indigo-300
+                        "
+                        type="text"
+                        name="name"
                         placeholder="Nom complet"
                         requiredmethods
+                        v-model="name"
+                      />
+                    </div>
+                    <div class="mb-6">
+                      <input
+                        id="email"
                         class="
                           w-full
                           px-3
@@ -233,37 +249,16 @@
                           focus:ring focus:ring-indigo-100
                           focus:border-indigo-300
                         "
-                      />
-                    </div>
-                    <div class="mb-6">
-                      <input
                         type="email"
-                        v-model="email"
                         name="email"
-                        id="email"
                         placeholder="Email"
                         required
-                        class="
-                          w-full
-                          px-3
-                          py-2
-                          placeholder-gray-300
-                          border border-gray-300
-                          rounded-sm
-                          focus:outline-none
-                          focus:ring focus:ring-indigo-100
-                          focus:border-indigo-300
-                        "
+                        v-model="email"
                       />
                     </div>
                     <div class="mb-6">
                       <input
-                        type="text"
-                        v-model="object"
-                        name="object"
                         id="object"
-                        placeholder="Objet"
-                        required
                         class="
                           w-full
                           px-3
@@ -275,15 +270,16 @@
                           focus:ring focus:ring-indigo-100
                           focus:border-indigo-300
                         "
+                        type="text"
+                        name="object"
+                        placeholder="Objet"
+                        required
+                        v-model="object"
                       />
                     </div>
                     <div class="mb-6">
                       <textarea
-                        rows="5"
-                        v-model="message"
-                        name="message"
                         id="message"
-                        placeholder="Message"
                         class="
                           w-full
                           px-3
@@ -295,7 +291,11 @@
                           focus:ring focus:ring-indigo-100
                           focus:border-indigo-300
                         "
+                        rows="5"
+                        name="message"
+                        placeholder="Message"
                         required
+                        v-model="message"
                       ></textarea>
                     </div>
                     <div class="mb-6 md:flex md:justify-center captcha-container">
@@ -307,7 +307,6 @@
                     </div> 
                     <div class="mb-6">
                       <button
-                        type="submit"
                         class="
                           w-full
                           px-3
@@ -320,15 +319,16 @@
                           focus:bg-secondary
                           focus:outline-none
                         "
+                        type="submit"
                       >
                         Envoyer
                       </button>
                     </div>
                     <p
+                      v-if="result"
                       class="text-base text-center"
                       id="result"
                       :class="color"
-                      v-if="result"
                     >
                       {{ result }}
                     </p>
