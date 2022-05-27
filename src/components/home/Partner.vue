@@ -35,7 +35,7 @@
     </div>
 
     <div
-      class="w-full md:w-full lg:w-3/4 flex-row justify-center items-start flex-wrap mx-auto flex lg:space-x-4"
+      class="w-full md:w-full lg:w-3/4 flex-row justify-end items-start flex-wrap mx-auto flex lg:space-x-4"
     >
       <div class="1/3 space-y-4">
         <div
