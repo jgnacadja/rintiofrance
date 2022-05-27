@@ -10,7 +10,9 @@ module.exports = {
     theme: {
         extend: {
             width: {
-                '90vw': '90vw'
+                '90vw': '90vw',
+                '92vw': '92vw',
+                '95vw': '95vw'
             },
             screens: {
                 'xs': '320px',

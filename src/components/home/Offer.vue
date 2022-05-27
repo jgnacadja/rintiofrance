@@ -118,11 +118,11 @@
         </div>
       </div>
     </div>
-    <div class="flex justify-end space-x-4 w-90vw"> 
+    <div class="flex justify-end space-x-4 w-90vw md:w-95vw lg:w-92vw"> 
           <p class="pt-4">
             Voulez-vous nous rejoindre ? 
           </p> 
-          <g-link to="/postuler" class="px-6 py-2 max-h-14 w-36  text-sm text-white uppercase rounded-lg md:py-4 bg-secondary hover:bg-primary">Rejoindre</g-link> 
+          <g-link to="/postuler" class="px-6 py-2 max-h-14 w-36  text-sm text-white uppercase rounded-lg md:py-4 bg-secondary hover:bg-primary">Je postule</g-link> 
     </div>
   </div> 
   </div>
