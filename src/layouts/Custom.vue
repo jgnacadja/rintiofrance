@@ -6,7 +6,8 @@
           <g-link class="z-50" to="/"><Logo class="mx-4 md:mx-20 my-6" /></g-link>
           <Nav />
         </div>
-        <slot /> 
+        <slot />
+        <CustomFooter />
       </main>
     </transition>
   </div>
@@ -28,12 +29,14 @@
 
 <script>
 import Logo from "~/assets/images/rintio-logo-small.svg";
-import Nav from "./partials/Nav.vue"; 
+import Nav from "./partials/Nav.vue";
+import CustomFooter from "./partials/CustomFooter.vue";
 
 export default {
   components: {
     Logo,
-    Nav, 
+    Nav,
+    CustomFooter,
   },
   metaInfo() {
     return {
