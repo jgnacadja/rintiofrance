@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <CustomLayout>
     <div class="postuler my-9">
       <h1 class="text-center">Je postule</h1>
       <div class="md:flex md:content-center md:justify-center md:items-center">
@@ -250,12 +250,13 @@
         </form>
       </div>
     </div>
-  </Layout>
+  </CustomLayout>
 </template>
 
 <script>
 import VueHcaptcha from "@hcaptcha/vue-hcaptcha";
 import emailjs from "emailjs-com";
+import CustomLayout from "~/layouts/Custom.vue";
 
 export default {
   metaInfo() {
@@ -284,6 +285,7 @@ export default {
   },
   components: {
     VueHcaptcha,
+    CustomLayout
   },
   methods: {
     onVerify() {
