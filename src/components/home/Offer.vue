@@ -84,7 +84,7 @@
     <div class="flex justify-end items-center space-x-4 pl-auto px-4">
       <p class="pt-6">Voulez-vous nous rejoindre ?</p>
       <g-link to="/postuler"
-        class="py-1 max-h-8 px-4 font-medium  w-fit text-sm text-white uppercase rounded-full  bg-secondary hover:bg-primary">
+        class="max-h-12 font-medium  w-fit text-sm text-white uppercase bg-primary rounded-sm hover:bg-secondary px-8 py-2 md:py-4">
         Je postule</g-link>
     </div>
   </div>
