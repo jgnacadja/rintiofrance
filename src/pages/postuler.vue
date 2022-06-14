@@ -67,8 +67,7 @@
               />
             </div>
             <div class="px-2 mb-3">
-              <input
-                required
+              <input 
                 type="url"
                 class="
                   w-full
