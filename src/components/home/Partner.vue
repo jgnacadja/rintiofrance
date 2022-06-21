@@ -89,6 +89,7 @@ export default {
       type: String,
       default() {
         return "";
+      
       },
     },
     content: {
