@@ -55,10 +55,10 @@
         <div
           class="currentColorHome w-full mx-4 mt-2 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
         >
-          <div class="h-full pt-4">
+          <div class="h-full pt-4" @click="openMenu = !openMenu">
             <g-link to="/">
               <span class="my-auto font-bold uppercase font-openSans"
-                >Qui-sommes-nous</span
+                >Accueil</span
               >
             </g-link>
           </div>
@@ -67,10 +67,22 @@
         <div
           class="currentColorAbout w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
         >
-          <div class="h-full pt-4">
-            <g-link to="/a-propos">
+          <div class="h-full pt-4" @click="openMenu = !openMenu">
+            <g-link to="/#qui_sommes_nous">
               <span class="my-auto font-bold uppercase font-openSans">
-                Nos services
+                Qui-sommes-nous
+              </span>
+            </g-link>
+          </div>
+        </div>
+
+        <div
+          class="currentColorAbout w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
+        >
+          <div class="h-full pt-4" @click="openMenu = !openMenu">
+            <g-link to="/#nos_offres">
+              <span class="my-auto font-bold uppercase font-openSans">
+                Nos offres
               </span>
             </g-link>
           </div>
@@ -79,8 +91,8 @@
         <div
           class="currentColorOffer w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
         >
-          <div class="h-full pt-4">
-            <g-link to="/offres">
+          <div class="h-full pt-4" @click="openMenu = !openMenu">
+            <g-link to="/#nos_clients">
               <span class="my-auto font-bold uppercase font-openSans">
                 Nos clients</span
               >
@@ -91,8 +103,8 @@
                 <div
           class="currentColorOffer w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
         >
-          <div class="h-full pt-4">
-            <g-link to="/offres">
+          <div class="h-full pt-4" @click="openMenu = !openMenu">
+            <g-link to="/#contactez_nous">
               <span class="my-auto font-bold uppercase font-openSans">
                 Nous contacter</span
               >
@@ -103,7 +115,7 @@
                  <div
             class="text-center"
           >
-            <div class="h-full pt-2 mx-2">
+            <div class="h-full pt-2 mx-2" @click="openMenu = !openMenu">
               <g-link to="/postuler">
                 <button type="submit" class="font-bold rounded my-auto p-4 text-white text-sm bg-secondary rounded-sm hover:bg-primary focus:outline-none uppercase">
                 Je postule
@@ -165,7 +177,7 @@
         class="currentColorAbout w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
       >
         <div class="h-full pt-10">
-          <g-link to="/a-propos">
+          <g-link to="/#qui_sommes_nous">
             <span class="my-auto font-bold uppercase font-openSans"
               >A propos</span
             >
@@ -177,7 +189,7 @@
         class="currentColorOffer w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
       >
         <div class="h-full pt-10">
-          <g-link to="/offres">
+          <g-link to="/#nos_offres">
             <span class="my-auto font-bold uppercase font-openSans"
               >Nos offres</span
             >
@@ -189,7 +201,7 @@
         class="currentColorBlog w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
       >
         <div class="h-full pt-10">
-          <g-link to="/blog">
+          <g-link to="/#nos_clients">
             <span class="my-auto font-bold uppercase font-openSans">Nos clients</span>
           </g-link>
         </div>
@@ -199,7 +211,7 @@
         class="currentColorBlog w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
       >
         <div class="h-full pt-10">
-          <g-link to="/blog">
+          <g-link to="/#contactez_nous">
             <span class="my-auto font-bold uppercase font-openSans">Nous contactez</span>
           </g-link>
         </div>
