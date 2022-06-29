@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <Contact />
-
+  <div> 
     <footer class="bg-primary">
       <div></div>
       <div class="flex-wrap w-full px-4 text-white md:flex lg:flex-nowrap sm:px-0 lg:px-4 md:px-0 md:mx-0 md:text-left">
@@ -91,15 +89,13 @@
 <script type="text/javascript" src="https://app.mailjet.com/statics/js/iframeResizer.min.js"></script>
 
 <script>
-  import Logo from "./Logo";
-  import Contact from "~/components/Contact.vue";
+  import Logo from "./Logo"; 
   import Send from "~/assets/images/icons/send.svg";
   import ChevronUp from "~/assets/images/icons/chevronup.svg";
 
   export default {
     components: {
-      Logo,
-      Contact,
+      Logo, 
       Send,
       ChevronUp,
     },

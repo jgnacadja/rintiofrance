@@ -24,23 +24,9 @@
 
     <LazyHydrate when-visible>
       <Partner
-        :title="$page.page.sections[4].name"
-        :content="$page.page.sections[4].columns[0]"
-        :partners="$page.page.sections[4].columns[1].columns"
-      />
-    </LazyHydrate>
-
-    <LazyHydrate when-visible>
-      <Blog
-        :title="$page.page.sections[5].name"
-        :content="$page.page.sections[5].columns[0]"
-      />
-    </LazyHydrate> 
-
-    <LazyHydrate when-visible>
-      <Map
-        :cover="$page.page.sections[6].columns[0]"
-        :content="$page.page.sections[6].columns[1]"
+        :title="$page.page.sections[3].name"
+        :content="$page.page.sections[3].columns[0]"
+        :partners="$page.page.sections[3].columns[1].columns"
       />
     </LazyHydrate>
   </Layout>
@@ -48,7 +34,7 @@
 
 <page-query>
 query {
-  page: contentfulPage(path: "Acceuil") {
+  page: contentfulPage(path: "Acceuil France") {
     path
     seo {
       id
@@ -152,8 +138,6 @@ import Homeslider from "~/components/home/Homeslider.vue";
 import About from "~/components/home/About.vue";
 import Offer from "~/components/home/Offer.vue"; 
 import Partner from "~/components/home/Partner.vue";
-import Blog from "~/components/home/Blog.vue";
-import Map from "~/components/home/Map.vue";
 
 export default {
   components: {
@@ -162,8 +146,6 @@ export default {
     About,
     Offer, 
     Partner,
-    Blog,
-    Map,
   },
   metaInfo() {
     return {
