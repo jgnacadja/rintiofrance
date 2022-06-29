@@ -4,7 +4,7 @@
       <Homeslider :slides="$page.page.sections[0].columns" />
     </LazyHydrate>
 
-    <LazyHydrate when-visible>
+    <LazyHydrate when-visible id="qui_sommes_nous">
       <About
         :title="$page.page.sections[1].name"
         :swipper="$page.page.sections[1].columns[0]"
@@ -13,7 +13,7 @@
       />
     </LazyHydrate>
 
-    <LazyHydrate when-visible>
+    <LazyHydrate when-visible id="nos_offres">
       <Offer
         :title="$page.page.sections[2].name"
         :cover="$page.page.sections[2].columns[0]"
@@ -22,7 +22,7 @@
       />
     </LazyHydrate> 
 
-    <LazyHydrate when-visible>
+    <LazyHydrate when-visible id="nos_clients">
       <Partner
         :title="$page.page.sections[3].name"
         :content="$page.page.sections[3].columns[0]"

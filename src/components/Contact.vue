@@ -21,7 +21,7 @@
           <div>
             <div class="mx-auto">
               <div class="max-w-lg mx-auto my-10">
-                <div class="pt-6 mx-4 md:mx-0">
+                <div class="pt-6 mx-4 md:mx-0" id="contactez_nous">
                   <h3 class="my-3 text-sm font-semibold uppercase text-primary">
                     Contactez-nous
                   </h3>
