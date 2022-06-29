@@ -217,10 +217,10 @@ export default {
       if (this.captchaVerified) {
         emailjs
           .sendForm(
-            serviceId,
-            templaceId,
+            this.serviceId,
+            this.templateId,
             e.target,
-            eUserId
+            this.eUserId
           )
           .then(
             () => {
