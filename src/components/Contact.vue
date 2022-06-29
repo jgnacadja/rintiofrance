@@ -188,7 +188,7 @@
                           focus:outline-none
                           focus:ring focus:ring-indigo-100
                           focus:border-indigo-300
-                        " type="text" name="name" placeholder="Nom complet" requiredmethods v-model="name" />
+                        " type="text" name="name" placeholder="Nom complet" required v-model="name" />
                     </div>
                     <div class="mb-6">
                       <input id="email" class="
