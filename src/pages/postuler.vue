@@ -184,7 +184,7 @@ export default {
       color: null,
       captchaVerified: false,
       siteKey: process.env.GRIDSOME_HCAPTCHA,
-      serviceId: process.env.GRIDSOME_EMAILJS_SERVICE_ID,
+      serviceId: process.env.GRIDSOME_EMAILJS_RECRUIT_TEMPLATE_ID,
       templateId: process.env.GRIDSOME_EMAILJS_RECRUIT_TEMPLATE_ID,
       eUserId: process.env.GRIDSOME_EMAILJS_USER_ID
     };
