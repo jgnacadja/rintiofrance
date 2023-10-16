@@ -135,7 +135,7 @@
                     </div>
                     <div class="w-10/12 px-4 md:px-0">
                       <div>
-                        <a class="hover:text-secondary" href="#"> 17 rue Crevel duval Ruel malmaison </a>
+                        <a class="hover:text-secondary" href="#"> 3 Rue Du Commandant Louis Guy, 92500 RUEIL-MALMAISON </a>
                       </div>
                     </div>
                   </div>
