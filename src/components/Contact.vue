@@ -58,6 +58,7 @@
                     Besoin d'échanger sur
                     <span class="text-secondary">votre besoin ?</span>
                   </h2>
+                  <h4 class="text-primary"><a href="https://calendly.com/michel-idjinou" target="_blank">Cliquez ici pour echanger avec nos experts</a> </h4>
 
                   Toutes nos équipe en france se tiennent a votre disposition
                 </div>
@@ -83,7 +84,7 @@
                     </div>
                     <div class="w-10/12 px-4 md:px-0">
                       <div>
-                        <a class="hover:text-secondary" href="tel:+33 6 25 18 40 11">+33 6 27 54 50 21</a>
+                        <a class="hover:text-secondary" href="tel:+33 6 25 18 40 11">+33 6 25 18 40 11</a>
                       </div>
                     </div>
                   </div>
@@ -253,6 +254,10 @@
                     <p v-if="result" class="text-base text-center" id="result" :class="color">
                       {{ result }}
                     </p>
+
+                    <div class="mt-6 text-center text-primary">
+                      <span class="text-black"> ou </span><br>
+                      <h4><a href="https://calendly.com/michel-idjinou" target="_blank">Prendre rendez-vous pour échanger avec nos experts</a> </h4></div>
                   </form>
                 </div>
               </div>
