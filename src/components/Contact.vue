@@ -58,7 +58,7 @@
                     Besoin d'échanger sur
                     <span class="text-secondary">votre besoin ?</span>
                   </h2>
-                  <h4 class="text-primary"><a href="https://calendly.com/michel-idjinou" target="_blank">Cliquez ici pour echanger avec nos experts</a> </h4>
+                  <h4 class="text-primary"><a href="https://calendly.com/michel-idjinou/30min" target="_blank">Cliquez ici pour echanger avec nos experts</a> </h4>
 
                   Toutes nos équipe en france se tiennent a votre disposition
                 </div>
@@ -257,7 +257,7 @@
 
                     <div class="mt-6 text-center text-primary">
                       <span class="text-black"> ou </span><br>
-                      <h4><a href="https://calendly.com/michel-idjinou" target="_blank">Prendre rendez-vous pour échanger avec nos experts</a> </h4></div>
+                      <h4><a href="https://calendly.com/michel-idjinou/30min" target="_blank">Prendre rendez-vous pour échanger avec nos experts</a> </h4></div>
                   </form>
                 </div>
               </div>
