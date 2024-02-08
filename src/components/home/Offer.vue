@@ -92,7 +92,7 @@
 
 <static-query>
   query{
-  offer: contentfulCategory(path: "offres-france") {
+  offer: contentfulCategory(path: "offres-France") {
   id
   title
   path
@@ -122,7 +122,7 @@
   }
   }
 
-  offers: contentfulCategory(path: "offres-france") {
+  offers: contentfulCategory(path: "offres-France") {
   id
   title
   path

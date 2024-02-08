@@ -58,9 +58,9 @@
                     Besoin d'échanger sur
                     <span class="text-secondary">votre besoin ?</span>
                   </h2>
-                  <h4 class="text-primary"><a href="https://calendly.com/michel-idjinou/30min" target="_blank">Cliquez ici pour echanger avec nos experts</a> </h4>
+                  <!-- <h4 class="text-primary"><a href="https://calendly.com/michel-idjinou/30min" target="_blank">Cliquez ici pour echanger avec nos experts</a> </h4> -->
 
-                  Toutes nos équipe en france se tiennent a votre disposition
+                  Toutes nos équipes en France se tiennent a votre disposition
                 </div>
 
                 <div>
@@ -138,6 +138,29 @@
                       <div>
                         <a class="hover:text-secondary" href="#"> 3 Rue Du Commandant Louis Guy, 92500 RUEIL-MALMAISON </a>
                       </div>
+                    </div>
+                  </div>
+
+                  <!-- Booking calendar-->
+                  <div class="flex items-center p-4">
+                    <div class="w-10/12 text-center">
+                      <a href="https://calendly.com/michel-idjinou/30min">
+                      <button class="
+                          w-full
+                          px-3
+                          py-2
+                          bg-transparent 
+                          hover:bg-secondary 
+                          text-secondary
+                          font-semibold 
+                          hover:text-white 
+                          py-2 px-4 
+                          border border-secondary hover:border-transparent rounded
+                        "
+                        type="button"
+                        >
+                        Prendre rendez-vous pour échanger avec nos experts
+                      </button></a>
                     </div>
                   </div>
 
@@ -257,7 +280,7 @@
 
                     <div class="mt-6 text-center text-primary">
                       <span class="text-black"> ou </span><br>
-                      <h4><a href="https://calendly.com/michel-idjinou/30min" target="_blank">Prendre rendez-vous pour échanger avec nos experts</a> </h4></div>
+                      <h4><a href="https://calendly.com/michel-idjinou/30min" target="_blank" class="text-primary-200">Prendre rendez-vous pour échanger avec nos experts</a> </h4></div>
                   </form>
                 </div>
               </div>
