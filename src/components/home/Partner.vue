@@ -4,13 +4,12 @@
     style="background: #e8e8e8"
   >
     <div
-      class="w-full md:w-full lg:w-1/4 text-center md:text-center lg:text-left"
+      class="w-full md:w-full lg:w-1/8 text-center md:text-center lg:text-left"
     >
-      <div class="mx-4 md:mx-0">
+      <div class="mx-2 md:mx-0">
         <h3 class="mb-3 text-sm text-primary font-semibold uppercase">
           {{ title }}
         </h3>
-        <!-- Title Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-secondary"></span>
           <span
@@ -20,17 +19,6 @@
             class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"
           ></span>
         </div>
-      </div>
-      <div class="mx-4 md:mx-0 pt-6">
-        <h2
-          class="text-2xl md:text-5xl text-primary font-extrabold"
-          v-html="content.title"
-        ></h2>
-
-        <div
-          class="hidden md:block my-3 font-light"
-          v-html="richtextToHTML(content.text)"
-        ></div>
       </div>
     </div>
 

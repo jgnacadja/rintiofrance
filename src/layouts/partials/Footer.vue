@@ -58,22 +58,22 @@
         <div class="w-full p-5 sm:px-10 lg:px-20 lg:w-3/12">
               <p class="mb-4">Suivez nous sur :</p>
           <div class="flex">
-            <a class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
+            <!-- <a class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
               href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr" target="_blank" rel="noopener">
               <em class="fab fa-facebook-f"></em>
-            </a>
+            </a> -->
             <a class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
               href="https://www.linkedin.com/company/rintio/" target="_blank" rel="noopener">
               <em class="relative fab fa-linkedin-in"></em>
             </a>
-            <a class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
+            <!-- <a class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
               href="https://twitter.com/RintioGroup/" target="_blank" rel="noopener">
               <em class="relative fab fa-twitter"></em>
             </a>
             <a class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
               href="https://twitter.com/RintioGroup/" target="_blank" rel="noopener">
               <em class="relative fab fa-instagram"></em>
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@
       <!-- Copyright Bar -->
       <div class="bg-secondary">
         <div class="px-3 py-4 m-auto font-bold text-center text-white">
-          Rintio 2022 © Tous droits réservés
+          Rintio {{ getYear }} © Tous droits réservés
         </div>
       </div>
     </footer>
@@ -102,6 +102,13 @@
       Contact,
       Send,
       ChevronUp,
+    },
+    computed:{
+      getYear(){
+        const date = new Date()
+        //date.format('YYYY')
+        return date.getFullYear()
+      }
     },
     data() {
       return {
