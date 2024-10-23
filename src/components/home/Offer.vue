@@ -81,12 +81,12 @@
         </div>
       </div> 
     </div> 
-    <div class="flex justify-end items-center space-x-4 pl-auto px-4">
+    <!-- <div class="flex justify-end items-center space-x-4 pl-auto px-4">
       <p class="pt-6">Voulez-vous nous rejoindre ?</p>
       <g-link to="/postuler"
         class="max-h-12 font-medium  w-fit text-sm text-white uppercase bg-primary rounded-sm hover:bg-secondary px-8 py-2 md:py-4">
         Je postule</g-link>
-    </div>
+    </div> -->
   </div>
 </template>
 
