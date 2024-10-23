@@ -30,10 +30,10 @@ export default function (Vue, { head }) {
   head.htmlAttrs = { lang: "fr" };
 
   // Import Crisp
-  head.script.push({
-    src: "crisp.js",
-    body: true,
-  });
+  // head.script.push({
+  //   src: "crisp.js",
+  //   body: true,
+  // });
 
   // import vue meta
   head.meta.push({

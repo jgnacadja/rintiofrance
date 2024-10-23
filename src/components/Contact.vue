@@ -1,22 +1,11 @@
 <template>
   <div class="w-full px-4 justify-evenly md:px-0 md:text-left" id="formulaire">
-    <div class="
-        md:grid
-        gap-2
-        md:grid-cols-2
-        lg:grid-cols-2
-        xl:grid-cols-2
-        lg:grid-flow-row
-        xl:grid-flow-rows
-      ">
-      <div class="
-          col-span-2
-          sm:col-span-1
-          md:col-span-1
-          lg:row-span-1
-          xl:col-span-1
-          xl:row-span-1
-        ">
+    <div
+      class="md:grid gap-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:grid-flow-row xl:grid-flow-rows"
+    >
+      <div
+        class="col-span-2 sm:col-span-1 md:col-span-1 lg:row-span-1 xl:col-span-1 xl:row-span-1"
+      >
         <div class="sm:px-8 lg:px-10">
           <div>
             <div class="mx-auto">
@@ -27,143 +16,120 @@
                   </h3>
                   <!-- Title Dot -->
                   <div class="-mt-3">
-                    <span class="inline-block w-20 h-2 rounded-full bg-secondary"></span>
-                    <span class="
-                        inline-block
-                        w-2
-                        h-2
-                        ml-2
-                        rounded-full
-                        bg-secondary
-                      "></span>
-                    <span class="
-                        inline-block
-                        w-2
-                        h-2
-                        ml-2
-                        rounded-full
-                        bg-secondary
-                      "></span>
+                    <span
+                      class="inline-block w-20 h-2 rounded-full bg-secondary"
+                    ></span>
+                    <span
+                      class="inline-block w-2 h-2 ml-2 rounded-full bg-secondary"
+                    ></span>
+                    <span
+                      class="inline-block w-2 h-2 ml-2 rounded-full bg-secondary"
+                    ></span>
                   </div>
                 </div>
 
                 <div class="pt-6 mx-4 md:mx-0">
-                  <h2 class="
-                      my-3
-                      text-2xl
-                      font-extrabold
-                      md:text-5xl
-                      text-primary
-                    ">
-                    Besoin d'échanger sur
+                  <h2
+                    class="my-3 text-2xl font-extrabold md:text-5xl text-primary"
+                  >
+                    Echangeons sur
                     <span class="text-secondary">votre besoin ?</span>
                   </h2>
                   <!-- <h4 class="text-primary"><a href="https://calendly.com/michel-idjinou/30min" target="_blank">Cliquez ici pour echanger avec nos experts</a> </h4> -->
 
-                  Toutes nos équipes en France se tiennent a votre disposition
+                  Nous sommes là pour répondre à toutes vos questions. Il vous
+                  suffit de remplir le <g-link to="/#forms" class="font-extrabold text-primary">formulaire suivant</g-link>, bien préciser
+                  votre demande et de cliquer sur «Envoyer». Nous vous
+                  répondrons dans les plus brefs délais !
+                  <br/><br/>
+                   
+                </div>
+                <!-- Booking calendar-->
+                <div class="flex items-center p-4">
+                  <div class="w-10/12 text-center">
+                    <a href="https://calendly.com/michel-idjinou/30min">
+                      <button
+                        class="w-full px-3 py-2 bg-transparent hover:bg-secondary text-secondary font-semibold hover:text-white py-2 px-4 border border-secondary hover:border-transparent rounded"
+                        type="button"
+                      >
+                      Vous pouvez aussi prendre rendez-vous pour échanger avec nos experts en cliquant ici
+                      </button></a
+                    >
+                  </div>
                 </div>
 
                 <div>
                   <div class="flex items-center p-4">
                     <div class="w-2/12 text-center">
-                      <button class="
-                          flex
-                          items-center
-                          w-12
-                          h-12
-                          p-3
-                          uppercase
-                          rounded-full
-                          pointer-events-none
-                          bg-secondary
-                          max-w-max
-                          bg-opacity-10
-                        ">
+                      <button
+                        class="flex items-center w-12 h-12 p-3 uppercase rounded-full pointer-events-none bg-secondary max-w-max bg-opacity-10"
+                      >
                         <Phone />
                       </button>
                     </div>
                     <div class="w-10/12 px-4 md:px-0">
                       <div>
-                        <a class="hover:text-secondary" href="tel:+33 6 25 18 40 11">+33 6 25 18 40 11</a>
+                        <a
+                          class="hover:text-secondary"
+                          href="tel:+33 6 25 18 40 11"
+                          >+33 6 25 18 40 11</a
+                        >
                       </div>
                     </div>
                   </div>
 
                   <div class="flex items-center p-4">
                     <div class="w-2/12 text-center">
-                      <button class="
-                          flex
-                          items-center
-                          w-12
-                          h-12
-                          p-3
-                          uppercase
-                          rounded-full
-                          pointer-events-none
-                          bg-secondary
-                          text-secondary
-                          max-w-max
-                          bg-opacity-10
-                        ">
+                      <button
+                        class="flex items-center w-12 h-12 p-3 uppercase rounded-full pointer-events-none bg-secondary text-secondary max-w-max bg-opacity-10"
+                      >
                         <Mail />
                       </button>
                     </div>
                     <div class="w-10/12 px-4 md:px-0">
                       <div>
-                        <a class="hover:text-secondary" href="mailto:contact@rintio.fr">Contact@rintio.fr</a>
+                        <a
+                          class="hover:text-secondary"
+                          href="mailto:contact@rintio.fr"
+                          >Contact@rintio.fr</a
+                        >
                       </div>
                     </div>
                   </div>
-
                   <div class="flex items-center p-4">
                     <div class="w-2/12 text-center">
-                      <button class="
-                          flex
-                          items-center
-                          w-12
-                          h-12
-                          p-3
-                          uppercase
-                          rounded-full
-                          pointer-events-none
-                          bg-secondary
-                          text-secondary
-                          max-w-max
-                          bg-opacity-10
-                        ">
+                      <button
+                        class="flex items-center w-12 h-12 p-3 uppercase rounded-full pointer-events-none bg-secondary text-secondary max-w-max bg-opacity-10"
+                      >
+                        <linkedin />
+                      </button>
+                    </div>
+                    <div class="w-10/12 px-4 md:px-0">
+                      <div>
+                        <a
+                          class="hover:text-secondary"
+                          href="https://www.linkedin.com/company/rintio-france"
+                          >LinkedIn</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center p-4">
+                    <div class="w-2/12 text-center">
+                      <button
+                        class="flex items-center w-12 h-12 p-3 uppercase rounded-full pointer-events-none bg-secondary text-secondary max-w-max bg-opacity-10"
+                      >
                         <location />
                       </button>
                     </div>
                     <div class="w-10/12 px-4 md:px-0">
                       <div>
-                        <a class="hover:text-secondary" href="#"> 3 Rue Du Commandant Louis Guy, 92500 RUEIL-MALMAISON </a>
+                        <a class="hover:text-secondary" href="#">
+                          3 Rue du Commandant Louis Guy, 92500 RUEIL-MALMAISON
+                        </a>
                       </div>
                     </div>
                   </div>
-
-                  <!-- Booking calendar-->
-                  <div class="flex items-center p-4">
-                    <div class="w-10/12 text-center">
-                      <a href="https://calendly.com/michel-idjinou/30min">
-                      <button class="
-                          w-full
-                          px-3
-                          py-2
-                          bg-transparent 
-                          hover:bg-secondary 
-                          text-secondary
-                          font-semibold 
-                          hover:text-white 
-                          py-2 px-4 
-                          border border-secondary hover:border-transparent rounded
-                        "
-                        type="button"
-                        >
-                        Prendre rendez-vous pour échanger avec nos experts
-                      </button></a>
-                    </div>
-                  </div>
-
                 </div>
               </div>
             </div>
@@ -171,116 +137,123 @@
         </div>
       </div>
 
-      <div class="
-          col-span-2
-          md:col-span-1
-          lg:row-span-1
-          xl:col-span-1
-          xl:row-span-1
-          bg-sky-800
-        ">
+      <div
+        class="col-span-2 md:col-span-1 lg:row-span-1 xl:col-span-1 xl:row-span-1 bg-sky-800"
+      >
         <div class="sm:px-8 lg:px-5">
           <!-- Contact Form -->
           <div class="items-center">
             <div class="mx-auto">
-              <div class="
-                  max-w-lg
-                  min-h-0
-                  p-5
-                  mx-auto
-                  my-10
-                  bg-white
-                  rounded-sm
-                  shadow-md
-                  md:shadow-xl
-                ">
-                <div class="mx-4 md:m-7">
-                  <h2 class="my-3 text-lg font-semibold text-gray-700 md:text-3xl">
+              <div
+                class="max-w-lg min-h-0 p-5 mx-auto my-10 bg-white rounded-sm shadow-md md:shadow-xl"
+              >
+                <div class="mx-4 md:m-7" id="forms">
+                  <h2
+                    class="my-3 text-lg font-semibold text-gray-700 md:text-3xl"
+                  >
                     Envoyer nous un message
                   </h2>
                 </div>
                 <div class="mx-4 md:m-7">
                   <form id="form" name="form" @submit.prevent="sendEmail">
                     <div class="mb-6">
-                      <input id="name" class="
-                          w-full
-                          px-3
-                          py-2
-                          placeholder-gray-300
-                          border border-gray-300
-                          rounded-sm
-                          focus:outline-none
-                          focus:ring focus:ring-indigo-100
-                          focus:border-indigo-300
-                        " type="text" name="name" placeholder="Nom complet" required v-model="name" />
+                      <input
+                        id="email"
+                        class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        required
+                        v-model="email"
+                      />
+                    </div>
+
+                    <div class="mb-6">
+                      <input
+                        id="phone"
+                        class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        type="text"
+                        name="phone"
+                        placeholder="06 12 34 56 78"
+                        v-model="phone"
+                      />
+                    </div>
+
+                    <div class="mb-6">
+                      <input
+                        id="company"
+                        class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        type="text"
+                        name="company"
+                        placeholder="Votre societe"
+                        required
+                        v-model="company"
+                      />
+                    </div>
+
+                    <div class="mb-6">
+                      <input
+                        id="name"
+                        class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        type="text"
+                        name="name"
+                        placeholder="Nom complet"
+                        required
+                        v-model="name"
+                      />
+                    </div>
+                    
+                    <div class="mb-6">
+                      <input
+                        id="object"
+                        class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        type="text"
+                        name="object"
+                        placeholder="Objet"
+                        required
+                        v-model="object"
+                      />
                     </div>
                     <div class="mb-6">
-                      <input id="email" class="
-                          w-full
-                          px-3
-                          py-2
-                          placeholder-gray-300
-                          border border-gray-300
-                          rounded-sm
-                          focus:outline-none
-                          focus:ring focus:ring-indigo-100
-                          focus:border-indigo-300
-                        " type="email" name="email" placeholder="Email" required v-model="email" />
+                      <textarea
+                        id="message"
+                        class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        rows="5"
+                        name="message"
+                        placeholder="Message"
+                        required
+                        v-model="message"
+                      ></textarea>
                     </div>
-                    <div class="mb-6">
-                      <input id="object" class="
-                          w-full
-                          px-3
-                          py-2
-                          placeholder-gray-300
-                          border border-gray-300
-                          rounded-sm
-                          focus:outline-none
-                          focus:ring focus:ring-indigo-100
-                          focus:border-indigo-300
-                        " type="text" name="object" placeholder="Objet" required v-model="object" />
-                    </div>
-                    <div class="mb-6">
-                      <textarea id="message" class="
-                          w-full
-                          px-3
-                          py-2
-                          placeholder-gray-300
-                          border border-gray-300
-                          rounded-sm
-                          focus:outline-none
-                          focus:ring focus:ring-indigo-100
-                          focus:border-indigo-300
-                        " rows="5" name="message" placeholder="Message" required v-model="message"></textarea>
-                    </div>
-                    <div class="mb-6 md:flex md:justify-center captcha-container">
-                      <vue-hcaptcha :sitekey="siteKey" @verify="onVerify" @expired="onExpire"
-                        @challenge-expired="onChallengeExpire" @error="onError">
+                    <div
+                      class="mb-6 md:flex md:justify-center captcha-container"
+                    >
+                      <vue-hcaptcha
+                        :sitekey="siteKey"
+                        @verify="onVerify"
+                        @expired="onExpire"
+                        @challenge-expired="onChallengeExpire"
+                        @error="onError"
+                      >
                       </vue-hcaptcha>
                     </div>
                     <div class="mb-6">
-                      <button class="
-                          w-full
-                          px-3
-                          py-2
-                          text-base text-white
-                          rounded-sm
-                          md:py-4
-                          md:text-xl
-                          bg-secondary
-                          focus:bg-secondary
-                          focus:outline-none
-                        " type="submit">
+                      <button
+                        class="w-full px-3 py-2 text-base text-white rounded-sm md:py-4 md:text-xl bg-secondary focus:bg-secondary focus:outline-none"
+                        type="submit"
+                      >
                         Envoyer
                       </button>
                     </div>
-                    <p v-if="result" class="text-base text-center" id="result" :class="color">
+                    <p
+                      v-if="result"
+                      class="text-base text-center"
+                      id="result"
+                      :class="color"
+                    >
                       {{ result }}
                     </p>
 
-                    <div class="mt-6 text-center text-primary">
-                      <span class="text-black"> ou </span><br>
-                      <h4><a href="https://calendly.com/michel-idjinou/30min" target="_blank" class="text-primary-200">Prendre rendez-vous pour échanger avec nos experts</a> </h4></div>
                   </form>
                 </div>
               </div>
@@ -293,18 +266,20 @@
 </template>
 
 <script>
-import Phone from "~/assets/images/icons/phone.svg";
-import Mail from "~/assets/images/icons/envelope.svg";
-import location from "~/assets/images/icons/location.svg";
-import emailjs from "emailjs-com";
+import Phone from '~/assets/images/icons/phone.svg';
+import Mail from '~/assets/images/icons/envelope.svg';
+import location from '~/assets/images/icons/location.svg';
+import linkedin from '~/assets/images/icons/linkedin.svg';
+import emailjs from 'emailjs-com';
 
-import VueHcaptcha from '@hcaptcha/vue-hcaptcha'
+import VueHcaptcha from '@hcaptcha/vue-hcaptcha';
 
 export default {
   components: {
     Phone,
     Mail,
     location,
+    linkedin,
     VueHcaptcha,
   },
   data() {
@@ -319,7 +294,7 @@ export default {
       siteKey: process.env.GRIDSOME_HCAPTCHA,
       serviceId: process.env.GRIDSOME_EMAILJS_SERVICE_ID,
       templateId: process.env.GRIDSOME_EMAILJS_TEMPLATE_ID,
-      eUserId: process.env.GRIDSOME_EMAILJS_USER_ID
+      eUserId: process.env.GRIDSOME_EMAILJS_USER_ID,
     };
   },
   methods: {
@@ -341,32 +316,25 @@ export default {
       $this.color = null;
 
       if (this.captchaVerified) {
-
         emailjs
-          .sendForm(
-            this.serviceId,
-            this.templateId,
-            e.target,
-            this.eUserId
-          )
+          .sendForm(this.serviceId, this.templateId, e.target, this.eUserId)
           .then(
             () => {
-              $this.result = "Votre message a été envoyé";
-              $this.color = "text-green-500";
+              $this.result = 'Votre message a été envoyé';
+              $this.color = 'text-green-500';
               // Reset form field
               $this.resetForm();
             },
             () => {
-              $this.result = "Une erreur est survenue, veuillez réessayer";
-              $this.color = "text-red-500";
+              $this.result = 'Une erreur est survenue, veuillez réessayer';
+              $this.color = 'text-red-500';
             }
           );
 
         this.captchaVerified = false;
-      }
-      else {
-        $this.result = "Le captcha doit être coché..";
-        $this.color = "text-red-500";
+      } else {
+        $this.result = 'Le captcha doit être coché..';
+        $this.color = 'text-red-500';
       }
     },
     resetForm() {
