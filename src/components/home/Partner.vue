@@ -48,10 +48,13 @@
 
 <static-query>
 query {
-  partners: contentfulAsset(id: "5fbEWBtxJFp82uOOngUocP") {
-    id
-    file {
-      url
+  partners: allContentfulAsset(filter: { title: { eq: "client partenaire" } }) {
+    edges {
+      node {
+        file {
+          url
+        }
+      }
     }
   }
 }

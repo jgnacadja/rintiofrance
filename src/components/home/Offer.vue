@@ -38,7 +38,7 @@
       </div>
       <div class="w-full h-full col-span-6 row-span-2 md:col-span-2 md:row-span-2 lg:col-span-1 lg:row-span-2">
         <div class="relative bg-center bg-no-repeat bg-cover shadow-lg group h-80 md:h-full"
-          v-for="edge in $static.offer.belongsTo.edges" :key="edge.node.id" v-bind:style="[
+          v-for="edge in $static.offer?.belongsTo?.edges" :key="edge.node.id" v-bind:style="[
             {
               backgroundImage: 'url(' + edge.node.coverImage.file.url + ')',
             },
@@ -58,7 +58,7 @@
         </div>
       </div>
       <div class="w-full h-full col-span-6 row-span-2 md:col-span-2 md:row-span-1 lg:col-span-1 lg:row-span-1"
-        v-for="edge in $static.offers.belongsTo.edges" :key="edge.node.id">
+        v-for="edge in $static.offers?.belongsTo?.edges" :key="edge.node.id">
         <div class="bg-white bg-center bg-no-repeat bg-cover shadow-lg group" v-bind:style="[
             {
               backgroundImage: 'url(' + edge.node.coverImage.file.url + ')',
@@ -91,67 +91,67 @@
 </template>
 
 <static-query>
-  query{
-  offer: contentfulCategory(path: "offres-France") {
-  id
-  title
-  path
-  belongsTo(order: ASC, limit: 1) {
-  edges {
-  node {
-  ... on ContentfulPost {
-  id
-  title
-  path
-  type
-  excerpt
-  categories {
-  id
-  title
-  }
-  date
-  coverImage {
-  file {
-  url
-  }
-  }
-  metaDescription
-  }
-  }
-  }
-  }
+query {
+  offer: contentfulCategory(path: "offres-france") {
+    id
+    title
+    path
+    belongsTo(order: ASC, limit: 1) {
+      edges {
+        node {
+          ... on ContentfulPost {
+            id
+            title
+            path
+            type
+            excerpt
+            categories {
+              id
+              title
+            }
+            date
+            coverImage {
+              file {
+                url
+              }
+            }
+            metaDescription
+          }
+        }
+      }
+    }
   }
 
-  offers: contentfulCategory(path: "offres-France") {
-  id
-  title
-  path
-  belongsTo(order: ASC, skip: 1, limit: 2) {
-  edges {
-  node {
-  ... on ContentfulPost {
-  id
-  title
-  path
-  type
-  excerpt
-  categories {
-  id
-  title
+  offers: contentfulCategory(path: "offres-france") {
+    id
+    title
+    path
+    belongsTo(order: ASC, skip: 1, limit: 2) {
+      edges {
+        node {
+          ... on ContentfulPost {
+            id
+            title
+            path
+            type
+            excerpt
+            categories {
+              id
+              title
+            }
+            date
+            coverImage {
+              file {
+                url
+              }
+            }
+            metaDescription
+          }
+        }
+      }
+    }
   }
-  date
-  coverImage {
-  file {
-  url
-  }
-  }
-  metaDescription
-  }
-  }
-  }
-  }
-  }
-  }
+}
 </static-query>
 
 <script>
