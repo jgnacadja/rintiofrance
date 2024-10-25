@@ -38,7 +38,8 @@
       class="w-full md:w-full lg:w-3/4 flex-row justify-end items-start flex-wrap mx-auto flex lg:space-x-4"
     >
       <g-image
-        :src="partnerList.file.url"
+        v-if="partnerList.length > 0"
+        :src="partnerList[0].node.file.url"
         class="w-full h-auto"
         alt="Partners"
       />
@@ -91,7 +92,7 @@ export default {
   },
   computed: {
     partnerList() {
-      return this.$static.partners;
+      return this.$static.partners.edges;
     },
   },
 };
