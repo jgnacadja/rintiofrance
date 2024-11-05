@@ -78,6 +78,46 @@ query {
               title
               text
             }
+            ... on ContentfulComponentSection {
+              id
+              title
+              name
+              columns {
+                ... on ContentfulComponentImage {
+                  id
+                  title
+                  name
+                  image {
+                    file {
+                      url
+                    }
+                  }
+                }
+                ... on ContentfulComponentText {
+                  id
+                  title
+                  text
+                }
+                ... on ContentfulPost {
+                  id
+                  title
+                  seoTitle
+                  path
+                  excerpt
+                  categories {
+                    id
+                    title
+                  }
+                  date
+                  coverImage {
+                    file {
+                      url
+                    }
+                  }
+                  metaDescription
+                }
+              }
+            }
             ... on ContentfulPost {
               id
               title
@@ -99,11 +139,11 @@ query {
           }
         }
         ... on ContentfulComponentButton {
-              id
-              title
-              ctaText
-              ctaLink
-            }
+          id
+          title
+          ctaText
+          ctaLink
+        }
       }
     }
   }
