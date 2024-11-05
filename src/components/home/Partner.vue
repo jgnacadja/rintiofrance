@@ -4,12 +4,10 @@
       class="md:px-16 md:flex w-full justify-center flex-wrap py-6 md:py-24 text-black"
       style="background: #e8e8e8"
     >
-      <div
-        class="w-full md:w-full lg:w-1/8 text-center md:text-center lg:text-left"
-      >
+      <div class="w-full text-center md:text-center lg:text-left">
         <div class="mx-2 md:mx-0">
           <h3 class="mb-3 text-sm text-primary font-semibold uppercase">
-            {{ title }}
+            {{ data.name }}
           </h3>
           <div class="-mt-3">
             <span
@@ -25,36 +23,32 @@
         </div>
       </div>
 
-      <div
-        class="w-full md:w-full lg:w-3/4 flex-row justify-end items-start flex-wrap mx-auto flex lg:space-x-4"
-      >
-        <g-image
-          v-if="partnerList.length > 0"
-          :src="partnerList[0].node.file.url"
-          class="w-full h-auto"
-          alt="Partners"
-        />
-      </div>
+      <section class="py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="partners grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3"
+          >
+            <figure
+              v-for="partner in data.columns"
+              :key="partner.id"
+              class="bg-white image is-16by9 flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl"
+            >
+              <g-image
+                :src="partner.image.file.url"
+                class="w-40 h-auto m-auto"
+                :alt="partner.image.title"
+                width="160"
+                height="96"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
     </div>
   </LazyHydrate>
 </template>
 
-<static-query>
-query {
-  partners: allContentfulAsset(filter: { title: { eq: "client partenaire" } }) {
-    edges {
-      node {
-        file {
-          url
-        }
-      }
-    }
-  }
-}
-</static-query>
-
 <script>
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import LazyHydrate from "vue-lazy-hydration";
 
 export default {
@@ -69,18 +63,23 @@ export default {
   components: {
     LazyHydrate,
   },
-  methods: {
-    richtextToHTML(content) {
-      return documentToHtmlString(content);
-    },
-  },
-  computed: {
-    title() {
-      return this.data.name;
-    },
-    partnerList() {
-      return this.$static.partners.edges;
-    },
-  },
 };
 </script>
+
+<style scoped>
+.partners {
+  zoom: 2;
+}
+
+@media (max-width: 768px) {
+  .partners {
+    zoom: 1.5;
+  }
+}
+
+@media (max-width: 425px) {
+  .partners {
+    zoom: 1;
+  }
+}
+</style>
