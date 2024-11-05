@@ -1,18 +1,11 @@
-// This is the main.js file. Import global CSS and scripts here.
-// The Client API can be used here. Learn more: gridsome.org/docs/client-api
-
 import DefaultLayout from "~/layouts/Default.vue";
-
 import "~/main.scss";
 import "~/variables.scss";
 import "~/assets/font-awesome/all.js";
 
 import VueScrollTo from "vue-scrollto";
-
 import Typography from "typography";
-
 import VueObserveVisibility from "vue-observe-visibility";
-
 import VueTailwind from "vue-tailwind";
 
 const typography = new Typography({
@@ -28,6 +21,30 @@ const fontsCss = require("./assets/css/fonts.css");
 export default function (Vue, { head }) {
   // Add attributes to HTML tag
   head.htmlAttrs = { lang: "fr" };
+
+  // Inject Usercentrics scripts and styles
+  head.link.push({
+    rel: "preconnect",
+    href: "//privacy-proxy.usercentrics.eu",
+  });
+
+  head.link.push({
+    rel: "preload",
+    href: "//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js",
+    as: "script",
+  });
+
+  head.script.push({
+    type: "application/javascript",
+    src: "https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js",
+  });
+
+  head.script.push({
+    id: "usercentrics-cmp",
+    src: "https://web.cmp.usercentrics.eu/ui/loader.js",
+    async: true,
+    "data-settings-id": "OB5HQ1USqBI_HK",
+  });
 
   // Import Crisp
   // head.script.push({
@@ -57,6 +74,5 @@ export default function (Vue, { head }) {
   });
 
   Vue.use(VueObserveVisibility);
-
   Vue.use(VueTailwind);
 }
