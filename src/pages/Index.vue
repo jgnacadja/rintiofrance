@@ -4,31 +4,9 @@
       <Homeslider :slides="$page.page.sections[0].columns" />
     </LazyHydrate>
 
-    <LazyHydrate when-visible id="qui_sommes_nous">
-      <About
-        :title="$page.page.sections[1].name"
-        :swipper="$page.page.sections[1].columns[0]"
-        :content="$page.page.sections[1].columns[1]"
-        :button="$page.page.sections[1].columns[2]"
-      />
-    </LazyHydrate>
-
-    <LazyHydrate when-visible id="nos_offres">
-      <Offer
-        :title="$page.page.sections[2].name"
-        :cover="$page.page.sections[2].columns[0]"
-        :content="$page.page.sections[2].columns[1]"
-        :button="$page.page.sections[2].columns[2]"
-      />
-    </LazyHydrate> 
-
-    <LazyHydrate when-visible id="nos_clients">
-      <Partner
-        :title="$page.page.sections[3].name"
-        :content="$page.page.sections[3].columns[0]"
-        :partners="$page.page.sections[3].columns[1].columns"
-      />
-    </LazyHydrate>
+    <div v-for="(key, index) in hydratationKeys" :key="key">
+      <component :is="key" :data="$page.page.sections[index + 1]" />
+    </div>
   </Layout>
 </template>
 
@@ -100,6 +78,46 @@ query {
               title
               text
             }
+            ... on ContentfulComponentSection {
+              id
+              title
+              name
+              columns {
+                ... on ContentfulComponentImage {
+                  id
+                  title
+                  name
+                  image {
+                    file {
+                      url
+                    }
+                  }
+                }
+                ... on ContentfulComponentText {
+                  id
+                  title
+                  text
+                }
+                ... on ContentfulPost {
+                  id
+                  title
+                  seoTitle
+                  path
+                  excerpt
+                  categories {
+                    id
+                    title
+                  }
+                  date
+                  coverImage {
+                    file {
+                      url
+                    }
+                  }
+                  metaDescription
+                }
+              }
+            }
             ... on ContentfulPost {
               id
               title
@@ -121,11 +139,11 @@ query {
           }
         }
         ... on ContentfulComponentButton {
-              id
-              title
-              ctaText
-              ctaLink
-            }
+          id
+          title
+          ctaText
+          ctaLink
+        }
       }
     }
   }
@@ -136,7 +154,7 @@ query {
 import LazyHydrate from "vue-lazy-hydration";
 import Homeslider from "~/components/home/Homeslider.vue";
 import About from "~/components/home/About.vue";
-import Offer from "~/components/home/Offer.vue"; 
+import Offer from "~/components/home/Offer.vue";
 import Partner from "~/components/home/Partner.vue";
 
 export default {
@@ -144,7 +162,7 @@ export default {
     LazyHydrate,
     Homeslider,
     About,
-    Offer, 
+    Offer,
     Partner,
   },
   metaInfo() {
@@ -163,6 +181,11 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    hydratationKeys() {
+      return ["about", "offer", "partner"];
+    },
   },
 };
 </script>

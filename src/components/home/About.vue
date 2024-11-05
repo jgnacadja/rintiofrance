@@ -233,25 +233,7 @@ import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   props: {
-    swipper: {
-      type: Object,
-      default() {
-        return {};
-      },
-    },
-    title: {
-      type: String,
-      default() {
-        return "";
-      },
-    },
-    content: {
-      type: Object,
-      default() {
-        return {};
-      },
-    },
-    button: {
+    data: {
       type: Object,
       default() {
         return {};
@@ -322,6 +304,20 @@ export default {
   methods: {
     richtextToHTML(content) {
       return documentToHtmlString(content);
+    },
+  },
+  computed: {
+    title() {
+      return this.data.name;
+    },
+    swipper() {
+      return this.data.columns[0];
+    },
+    content() {
+      return this.data.columns[1];
+    },
+    button() {
+      return this.data.columns[2];
     },
   },
 };
