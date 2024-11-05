@@ -3,7 +3,6 @@
     <div
       class="md:px-16 md:flex w-full justify-center py-6 md:py-24 md:space-x-6"
     >
-      ss
       <div class="w-full md:w-1/2 items-center justify-center mx-auto md:block">
         <div class="relative">
           <svg
