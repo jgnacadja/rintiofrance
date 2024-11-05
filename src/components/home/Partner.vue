@@ -25,7 +25,9 @@
 
       <section class="py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
+          <div
+            class="partners grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3"
+          >
             <figure
               v-for="partner in data.columns"
               :key="partner.id"
@@ -63,3 +65,21 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.partners {
+  zoom: 2;
+}
+
+@media (max-width: 768px) {
+  .partners {
+    zoom: 1.5;
+  }
+}
+
+@media (max-width: 425px) {
+  .partners {
+    zoom: 1;
+  }
+}
+</style>
