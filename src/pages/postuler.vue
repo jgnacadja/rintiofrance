@@ -145,7 +145,16 @@
             </vue-hcaptcha>
           </div>
           <div class="submit">
-            <input type="submit" value="Envoyer" class="py-2 px-5 rounded bg-red-500 text-white" />
+            <button type="submit" class="flex py-2 px-5 rounded bg-red-500 text-white">
+              Envoyer
+              <svg v-if="loading" class="animate-spin ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                </path>
+              </svg>
+            </button>
           </div>
           <p class="text-base text-center" id="result" :class="color" v-if="result">
             {{ result }}
@@ -184,9 +193,10 @@ export default {
       color: null,
       captchaVerified: false,
       siteKey: process.env.GRIDSOME_HCAPTCHA,
-      serviceId: process.env.GRIDSOME_EMAILJS_SERVICE_ID,
+      serviceId: process.env.GRIDSOME_EMAILJS_RECRUIT_SERVICE_ID,
       templateId: process.env.GRIDSOME_EMAILJS_RECRUIT_TEMPLATE_ID,
-      eUserId: process.env.GRIDSOME_EMAILJS_USER_ID
+      eUserId: process.env.GRIDSOME_EMAILJS_USER_ID,
+      loading: false,
     };
   },
   components: {
@@ -215,6 +225,7 @@ export default {
       this.lettreMotivation = document.getElementById("ltmt").value;
 
       if (this.captchaVerified) {
+        this.loading = true;
         emailjs
           .sendForm(
             this.serviceId,
@@ -224,12 +235,14 @@ export default {
           )
           .then(
             () => {
+              this.loading = false;
               this.result = "Votre message a été envoyé";
               this.color = "text-green-500";
               // Reset form field
               this.resetForm();
             },
             () => {
+              this.loading = false;
               this.result = "Une erreur est survenue, veuillez réessayer";
               this.color = "text-red-500";
             }
